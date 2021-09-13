@@ -3,15 +3,11 @@
 <%= render 'form', book: @book %>
 
 <%= form_tag :action => 'create' do %>
-<p><label for = "book_title">Title</label>:
 
-<%= text_field 'books', 'title' %></p>
-<p><label for = "book_author">Author</label>:
-
+<p><label for = "book_author">Author</label>
 <%= text_field 'books', 'author' %></p>
-<p><label for = "book_price">Price</label>:
 
-<%= submit_tag "Create" %>
+<p><label for = "book_price">Price</label>
+<%= text_field 'books', 'price' %></p>
 
-<% end -%>
 <%= link_to 'Back', books_path %>
