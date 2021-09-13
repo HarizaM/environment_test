@@ -1,32 +1,23 @@
 <div class="books new">
-  <h4>Add a New Book</h4>
+    <h1>Add a New Book</h1>
 
-  <%# <%= form_for(@subject, :url => subjects_path, :method => 'post') do |f| %>
-  <%= form_for(@book, :url => '/books/new', :method => 'post') do |f| %>
+    <!--<%= render 'form', book: @book %>-->
+    <%= form_for(@book, :url => '/books/new', :method => 'post') do |f| %>
 
-    <table summary="Books form fields">
-      <tr>
-        <th>Title</th>
-        <td><%= f.text_field(:title) %></td>
-      </tr>
-      <tr>
-        <th>Author</th>
-        <td><%= f.text_field(:author) %></td>
-      </tr>
-      <tr>
-        <th>Price</th>
-        <td><%= f.number_field(:price, step: 0.01) %></td>
-      </tr>
-      <tr>
-        <th>Published Date</th>
-        <td><%= f.text_field(:published_date) %></td>
-      </tr>
-    </table>
+    <!--<%= form_tag :action => 'create' do %>-->
 
-    <div class="form-buttons">
-      <%= f.submit("Add Book") %>
-    </div>
+    <p><label for = "book_title">Title</label>
+    <%= f.text_field(:title) %></p>
 
-  <%= link_to 'Back', books_path %>
-  <% end %>
+    <p><label for = "book_author">Author</label>
+    <%= f.text_field(:author) %></p>
+
+    <p><label for = "book_price">Price</label>
+    <%= f.number_field(:price, step: 0.01) %></p>
+
+
+    <%= f.submit("Create Book") %>
+
+    <%= link_to 'Back', books_path %>
+    <% end -%>
 </div>
