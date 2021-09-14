@@ -5,7 +5,7 @@ RSpec.describe Book, type: :model do
   subject do
     described_class.new(title: 'harry potter')
     described_class.new(author: 'JK Rowling')
-    described_class.new(price: 5)
+    described_class.new(price: 5.01)
     described_class.new(date: 2017-02-03)
   end
 
