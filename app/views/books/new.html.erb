@@ -4,7 +4,7 @@
     <!--<%= render 'form', book: @book %>-->
    
     <%= form_tag :action => 'create' do %>
-    <form action = "/books/create" method = "post">
+    <form action = "/books/new" method = "post">
 
     <p><label for = "book_title">Title</label>
     <%= text_field 'books', 'title' %></p>
@@ -15,6 +15,8 @@
     <p><label for = "book_price">Price</label>
     <%= number_field 'books', 'price' %></p>
 
+    <p><label for = "book_published_date">Published</label>
+    <%= date_select("date published", end_year: 2021) %></p>
 
     <%= submit_tag "Create Book" %>
 
