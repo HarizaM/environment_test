@@ -1,10 +1,10 @@
 <div class="books new">
     <h1>Add a New Book</h1>
 
-    <!--<%= render 'form', book: @book %>-->
+    <%= render 'form', book: @book %>
    
-    <%= form_tag :action => 'create' do %>
-    <form action = "/books/new" method = "post">
+    <!--<%= form_tag :action => 'create' do %>
+    <form action = "/books/new" method = "post">-->
 
     <p><label for = "book_title">Title</label>
     <%= text_field 'books', 'title' %></p>
@@ -16,7 +16,7 @@
     <%= number_field 'books', 'price' %></p>
 
     <p><label for = "book_published_date">Published</label>
-    <%= date_select("date published", end_year: 2021) %></p>
+    <%= date_select("date", end_year:2021, use_month_numbers: true) %></p>
 
     <%= submit_tag "Create Book" %>
 
