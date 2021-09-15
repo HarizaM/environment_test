@@ -1,25 +1,24 @@
-<div class="books new">
-    <h1>Add a New Book</h1>
+<h1>Add a New Book</h1>
 
-    <!--<%= render 'form', book: @book %>-->
+<!--<%= render 'form', book: @book %>-->
    
-    <!--<%= form_tag :action => 'create' do %>
-    <form action = "/books/new" method = "post">-->
+<!--<%= form_tag :action => 'create' do %>
+<form action = "/books/new" method = "post">-->
 
-    <p><label for = "book_title">Title</label>
-    <%= text_field 'books', 'title' %></p>
+<p><label for = "book_title">Title</label>
+<%= text_field 'books', 'title' %></p>
 
-    <p><label for = "book_author">Author</label>
-    <%= text_field 'books', 'author' %></p>
+<p><label for = "book_author">Author</label>
+<%= text_field 'books', 'author' %></p>
 
-    <p><label for = "book_price">Price</label>
-    <%= number_field 'books', 'price', step: 0.01 %></p>
+<p><label for = "book_price">Price</label>
+<%= number_field 'books', 'price', step: 0.01 %></p>
 
-    <p><label for = "book_published_date">Published</label>
-    <%= date_select("date", :start_year=> 2010, :end_year=> 2021, :use_month_numbers=> true) %></p>
+<p><label for = "book_published_date">Published</label>
+<%= date_select("date", :start_year=> 2010, :end_year=> 2021, :use_month_numbers=> true) %></p>
 
-    <%= submit_tag "Create Book" %>
+<%= submit_tag "Create Book" %>
 
-    <%= link_to 'Back', books_path %>
-    <% end -%>
-</div>
+<%= link_to 'Back', books_path %>
+<% end -%>
+

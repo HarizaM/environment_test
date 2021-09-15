@@ -1,6 +1,21 @@
 <h1>Editing Book</h1>
 
 <%= render 'form', book: @book %>
+<p><label for = "book_title">Title</label>
+<%= text_field 'books', 'title' %></p>
+
+<p><label for = "book_author">Author</label>
+<%= text_field 'books', 'author' %></p>
+
+<p><label for = "book_price">Price</label>
+<%= number_field 'books', 'price', step: 0.01 %></p>
+
+<p><label for = "book_published_date">Published</label>
+<%= date_select("date", :start_year=> 2010, :end_year=> 2021, :use_month_numbers=> true) %></p>
+
+<%= submit_tag "Update Book" %>
 
 <%= link_to 'Show', @book %> |
 <%= link_to 'Back', books_path %>
+
+<% end -%>
