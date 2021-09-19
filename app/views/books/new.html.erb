@@ -1,5 +1,19 @@
 <h1>New Book</h1>
 
 <%= render 'form', book: @book %>
-
 <%= link_to 'Back', books_path %>
+
+<%= form_for(@book, :url => '/books/new', :method => 'post') do |f| %>
+
+<p><label for = "book_author">Author</label>
+<%= f.text_field(:author) %></p>
+
+<p><label for = "book_price">Price</label>
+<%= f.number_field(:price, step: 0.01) %></p>
+
+<p><label for = "book_published_date">Published Date</label>
+<%= f.text_field (:published_date) %></p>
+
+<%= f.submit ("Create Book") %>
+
+<% end %>
