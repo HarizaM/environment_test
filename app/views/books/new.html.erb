@@ -1,6 +1,6 @@
 <h1>New Book</h1>
 
-<%= render 'form', book: @book %>
+<!--<%= render 'form', book: @book %>-->
 
 <%= form_for(@book, :url => '/books/new', :method => 'post') do |f| %>
 
@@ -11,7 +11,7 @@
 <%= f.number_field(:price, step: 0.01) %></p>
 
 <p><label for = "book_published_date">Published Date</label>
-<%= f.text_field (:published_date) %></p>
+<%= f.date_select("published_date", :published_date, :start_year=> 2010, :end_year=> 2021, :use_month_numbers=> true) %></p>
 
 <%= f.submit ("Create Book") %>
 <%= link_to 'Back', books_path %>

@@ -1,5 +1,6 @@
 # location: spec/unit/unit_spec.rb
 require 'rails_helper'
+require 'date'
 
 RSpec.describe Book, type: :model do
   it 'is valid with valid attributes' do
@@ -18,7 +19,7 @@ RSpec.describe Book, type: :model do
   end
 
   it 'is valid with valid attributes' do
-    described_class.new(published_date: '09/21/2017')
+    described_class.new(published_date: Date.new(2015,12,8))
     expect(subject).to be_valid
   end
 end

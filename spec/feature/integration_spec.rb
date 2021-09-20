@@ -1,5 +1,6 @@
 # location: spec/feature/integration_spec.rb
 require 'rails_helper'
+require 'date'
 
 RSpec.describe 'Creating a book', type: :feature do
   scenario 'valid inputs' do
@@ -28,10 +29,10 @@ RSpec.describe 'Creating a book', type: :feature do
 
   scenario 'valid inputs' do
     visit new_book_path
-    fill_in 'Published_date', with: '09/17/2017'
+    fill_in 'Published_date', with: Date.new(2015,12,8)
     click_on 'Create Book'
     visit books_path
-    expect(page).to have_content('09/17/2017')
+    expect(page).to have_content(2015-12-08)
   end
 end
 
