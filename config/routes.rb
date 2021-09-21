@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'books/new'
   post 'books/new'
   get 'books/show'
-  get 'books/update'
+  get 'books/update' #get 'books/edit'???
   post 'books/update'
   match '/books/create', to: 'books#create', via: :post
   match '/books/', to: 'books#index', via: :all
