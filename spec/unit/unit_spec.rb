@@ -4,22 +4,22 @@ require 'date'
 
 RSpec.describe Book, type: :model do
   it 'is valid with valid attributes' do
-    described_class.new(title: 'harry potter')
-    expect(subject).to be_valid
+    title = Book.new(title: 'harry potter', author: 'JK Rowling', price: 5.05, published_date: Date.new(2015,12,8))
+    expect(title).to be_valid
   end
 
   it 'is valid with valid attributes' do
-    described_class.new(author: 'JK Rowling')
-    expect(subject).to be_valid
+    author = Book.new(title: 'harry potter', author: 'JK Rowling', price: 5.05, published_date: Date.new(2015,12,8))
+    expect(author).to be_valid
   end
 
   it 'is valid with valid attributes' do
-    described_class.new(price: 5.05)
-    expect(subject).to be_valid
+    price = Book.new(title: 'harry potter', author: 'JK Rowling', price: 5.05, published_date: Date.new(2015,12,8))
+    expect(price).to be_valid
   end
 
   it 'is valid with valid attributes' do
-    described_class.new(published_date: Date.new(2015,12,8))
-    expect(subject).to be_valid
+    published_date = Book.new(title: 'harry potter', author: 'JK Rowling', price: 5.05, published_date: Date.new(2015,12,8))
+    expect(published_date).to be_valid
   end
 end
