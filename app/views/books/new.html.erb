@@ -1,25 +1,5 @@
 <h1>Add a New Book</h1>
 
-<!--<%= render 'form', book: @book %>-->
-   
-<!--<%= form_tag :action => 'create' do %> 
-<form action = "/books/new" method = "post">-->
-
-<%= form_for(@book, :url => '/books/create', :method => 'post') do |f| %>
-
-<p><label for = "book_title">Title</label>
-<%= f.text_field(:title) %></p>
-
-<p><label for = "book_author">Author</label>
-<%= f.text_field(:author) %></p>
-
-<p><label for = "book_price">Price</label>
-<%= f.number_field(:price, step: 0.01) %></p>
-
-<p><label for = "book_published_date">Published Date</label>
-<%= f.date_select("date", :published_date, :start_year=> 2010, :end_year=> 2021, :use_month_numbers=> true) %></p>
-
-<%= f.submit_tag ("Create Book") %>
+<%= render 'form', book: @book %>
 
 <%= link_to 'Back to Main Page', books_path %>
-<% end %>
