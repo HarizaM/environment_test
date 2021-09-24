@@ -15,13 +15,9 @@ RSpec.describe 'Creating a book', type: :feature do
 
   scenario 'valid inputs' do
     visit new_book_path
-<<<<<<< HEAD
-    fill_in 'Author', with: 'JK Rowling'
-=======
     fill_in 'Title', with: 'harry potter'
     fill_in 'Author', with: 'JK Rowling'
     fill_in 'Price', with: 5.05
->>>>>>> b23d2e4583379f1f57bf6fcc9d02a0e9b3dd71c4
     click_on 'Create Book'
     visit books_path
     expect(page).to have_content('JK Rowling')
@@ -29,11 +25,8 @@ RSpec.describe 'Creating a book', type: :feature do
 
   scenario 'valid inputs' do
     visit new_book_path
-<<<<<<< HEAD
-=======
     fill_in 'Title', with: 'harry potter'
     fill_in 'Author', with: 'JK Rowling'
->>>>>>> b23d2e4583379f1f57bf6fcc9d02a0e9b3dd71c4
     fill_in 'Price', with: 5.05
     click_on 'Create Book'
     visit books_path
@@ -42,14 +35,6 @@ RSpec.describe 'Creating a book', type: :feature do
 
   scenario 'valid inputs' do
     visit new_book_path
-<<<<<<< HEAD
-    fill_in 'Published_date', with: '09/17/2017'
-    click_on 'Create Book'
-    visit books_path
-    expect(page).to have_content('09/17/2017')
-  end
-end
-=======
     fill_in 'Title', with: 'harry potter'
     fill_in 'Author', with: 'JK Rowling'
     fill_in 'Price', with: 5.05
@@ -62,4 +47,3 @@ end
   end
 end
 
->>>>>>> b23d2e4583379f1f57bf6fcc9d02a0e9b3dd71c4
